@@ -1,0 +1,2029 @@
+{
+	"info": {
+		"_postman_id": "cedc5ba0-4876-43da-86dd-ed3dd163aa35",
+		"name": "trash-information",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "readContacts",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidReadContacts",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/contact/readContacts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"contact",
+										"readContacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createContact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateContact",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"service\": \"Carpintero\",\n  \"name\": \"Guillermo\",\n  \"lastname\": \"Gutiérrez\",\n  \"address\": \"San José\",\n  \"phone\": \"0987099923\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/contact/createContact",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"contact",
+										"createContact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateContact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateContact",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT4f4Eir06vSyaqFCR\",\n  \"service\": \"Albañil 3\",\n  \"name\": \"Juan 3\",\n  \"lastname\": \"Perez 3\",\n  \"address\": \"Miraflores 3\",\n  \"phone\": \"0998725873\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/contact/updateContact",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"contact",
+										"updateContact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteContact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteContact",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5FlsGbnHXLkygySj\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/contact/deleteContact",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"contact",
+										"deleteContact"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "new",
+					"item": [
+						{
+							"name": "readNews",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidReadNews",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/new/readNews",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"new",
+										"readNews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createNew",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateNew",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Diez países pesqueros se comprometen a reciclar 1.500 toneladas de redes en desuso\",\n  \"smallDescription\": \"Se busca apoyar economía circular para elaborar nuevos productos.\",\n  \"category\": \"ambiente\",\n  \"imageUrl\": \"https://www.eluniverso.com/resizer/ECr6MYK72dvmLRbLNpTidKMarro=/834x644/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/BNJPCN75JNEMTKZQLTUFKKSKYE.jpg\",\n  \"content\": \"Gremios de pesca industrial de diez países de América Latina se comprometieron a recuperar 1.500 toneladas de redes y aparejos en desuso para su reciclaje y posterior elaboración de nuevos productos. La iniciativa, que busca apoyar la economía circular, involucra a Ecuador, Argentina, Uruguay, Brasil, México, Costa Rica, El Salvador, Colombia, Perú y Chile. El compromiso de reciclar las redes se fijó en la sexta reunión de la Alianza Latinoamericana para la Pesca Sustentable y la Seguridad Alimentaria (Alpescas), de la cual es parte la Cámara Nacional de Pesquería de Ecuador. Este acuerdo se firmó con Bureo Inc., una empresa que elabora gorras a partir de reciclaje de redes. Con este acuerdo se pretende proteger los océanos de redes fantasmas, reducir la huella de carbono asociado al uso de esta materia prima, generar nuevos productos con valor agregado y aportar a los cumplimientos de los Objetivos de Desarrollo Sostenible de Naciones Unidas. Osciel Velásquez, presidente de Alpescas, dijo que no existe un precedente a nivel mundial de una iniciativa similar, que agrupe a la industria de todo un continente. “Hoy la economía circular permite un aprovechamiento integral de los recursos pesqueros, reciclando y reutilizando diversos desechos del proceso para generar nuevos productos, contribuyendo a más negocios y a la utilización de residuos biológicos y técnicos”, agregó Velásquez. Humberto Becerra, presidente de la Cámara Nacional de las Industrias Pesquera y Acuícola (Canainpesca), expresó la importancia de fortalecer la coordinación de las empresas para seguir impulsando la sostenibilidad de las pesquerías y adecuarse al mercado para fomentar el consumo. Durante la cita de los gremios de pesca industrial también se abordaron otros temas, como el impacto del COVID-19 y la pesca ilegal. Ray Hilborn, biólogo marino y profesor de Ciencias Acuáticas y Pesqueras en la Universidad de Washington, subrayó que la pesca no es la principal amenaza para los océanos, pues produce alimentos a un costo ambiental mucho menor que la agricultura. Pero enfatizó que es necesario gestionarla de manera sustentable. “La pesca no modifica los océanos, y en comparación con otras amenazas, es de relativamente bajo impacto y manejable”, dijo. Julio Berdegué, representante regional para América Latina y el Caribe de la FAO, expuso que el 40 % de la población en América Latina y el Caribe vive en inseguridad alimentaria, y reconoció que sin la pesca no podrá alcanzarse el objetivo de hambre cero. “Productividad, con sostenibilidad e inclusión social, es la ecuación para la pesca en este siglo; si no se resuelve, el futuro será muy incierto”, dijo al recordar que el año pasado, en un solo año, 44 millones de personas adicionales se unieron al grupo de quienes viven en inseguridad alimentaria. “Ese es el impacto de la pandemia. Ninguna otra región del mundo tuvo un incremento tan grande”, refirió. (I)\",\n  \"font\": \"https://www.eluniverso.com/noticias/economia/diez-paises-pesqueros-se-compromoten-a-reciclar-1500-toneladas-de-redes-en-desuso-nota/\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/new/createNew",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"new",
+										"createNew"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateNew",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateNew",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5FlsGbnHXLkygySj\",\n  \"title\": \"En Guayarte artistas ecuatorianas exhiben sus productos elaborados con llantas recicladas 2222\",\n  \"smallDescription\": \"Las manos de las artesanas ecuatorianas hacen de una llanta inservible un objeto útil y decorativo.\",\n  \"category\": \"reciclaje\",\n  \"imageUrl\": \"https://www.eluniverso.com/resizer/6eIfOUDeAINlwjBU07BklAfDAqs=/1005x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/K3ZHMB7UVNGZVIQYPJHEIYLYQE.jpg\",\n  \"content\": \"Gremios de pesca industrial de diez países de América Latina se comprometieron a recuperar 1.500 toneladas de redes y aparejos en desuso para su reciclaje y posterior elaboración de nuevos productos. La iniciativa, que busca apoyar la economía circular, involucra a Ecuador, Argentina, Uruguay, Brasil, México, Costa Rica, El Salvador, Colombia, Perú y Chile. El compromiso de reciclar las redes se fijó en la sexta reunión de la Alianza Latinoamericana para la Pesca Sustentable y la Seguridad Alimentaria (Alpescas), de la cual es parte la Cámara Nacional de Pesquería de Ecuador. Este acuerdo se firmó con Bureo Inc., una empresa que elabora gorras a partir de reciclaje de redes. Con este acuerdo se pretende proteger los océanos de redes fantasmas, reducir la huella de carbono asociado al uso de esta materia prima, generar nuevos productos con valor agregado y aportar a los cumplimientos de los Objetivos de Desarrollo Sostenible de Naciones Unidas. Osciel Velásquez, presidente de Alpescas, dijo que no existe un precedente a nivel mundial de una iniciativa similar, que agrupe a la industria de todo un continente. “Hoy la economía circular permite un aprovechamiento integral de los recursos pesqueros, reciclando y reutilizando diversos desechos del proceso para generar nuevos productos, contribuyendo a más negocios y a la utilización de residuos biológicos y técnicos”, agregó Velásquez. Humberto Becerra, presidente de la Cámara Nacional de las Industrias Pesquera y Acuícola (Canainpesca), expresó la importancia de fortalecer la coordinación de las empresas para seguir impulsando la sostenibilidad de las pesquerías y adecuarse al mercado para fomentar el consumo. Durante la cita de los gremios de pesca industrial también se abordaron otros temas, como el impacto del COVID-19 y la pesca ilegal. Ray Hilborn, biólogo marino y profesor de Ciencias Acuáticas y Pesqueras en la Universidad de Washington, subrayó que la pesca no es la principal amenaza para los océanos, pues produce alimentos a un costo ambiental mucho menor que la agricultura. Pero enfatizó que es necesario gestionarla de manera sustentable. “La pesca no modifica los océanos, y en comparación con otras amenazas, es de relativamente bajo impacto y manejable”, dijo. Julio Berdegué, representante regional para América Latina y el Caribe de la FAO, expuso que el 40 % de la población en América Latina y el Caribe vive en inseguridad alimentaria, y reconoció que sin la pesca no podrá alcanzarse el objetivo de hambre cero. “Productividad, con sostenibilidad e inclusión social, es la ecuación para la pesca en este siglo; si no se resuelve, el futuro será muy incierto”, dijo al recordar que el año pasado, en un solo año, 44 millones de personas adicionales se unieron al grupo de quienes viven en inseguridad alimentaria. “Ese es el impacto de la pandemia. Ninguna otra región del mundo tuvo un incremento tan grande”, refirió. (I)\",\n  \"font\": \"https://www.eluniverso.com/guayaquil/comunidad/en-guayarte-artistas-ecuatorianas-exhiben-sus-productos-elaborados-con-llantas-recicladas-nota/\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/new/updateNew",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"new",
+										"updateNew"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteNew",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteNew",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5FlsGbnHXLkygySj\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/new/deleteNew",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"new",
+										"deleteNew"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "recomendation",
+					"item": [
+						{
+							"name": "readRecomendations",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidReadRecomendations",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/recomendation/readRecomendations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"recomendation",
+										"readRecomendations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createRecomendation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateRecomendation",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Mascarillas, seguro de vida\",\n  \"category\": \"Coronavirus\",\n  \"description\": \"A menudo las mascarillas no son tratadas como se debería\",\n  \"portalImage\": \"https://images.unsplash.com/photo-1591870036007-2d195e054914?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80\",\n  \"profileImage\": \"https://images.unsplash.com/photo-1584634428004-1180accbcc9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/recomendation/createRecomendation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"recomendation",
+										"createRecomendation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateRecomendation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateRecomendation",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5_ZFUJbgrmp69YU3\",\n  \"title\": \"Botellas de plástico 22222\",\n  \"category\": \"Reciclables\",\n  \"description\": \"Las botellas y su descripción\",\n  \"portalImage\": \"https://images.unsplash.com/photo-1571727153934-b9e0059b7ab2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80\",\n  \"profileImage\": \"https://images.unsplash.com/photo-1616118134296-63970235de49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/recomendation/updateRecomendation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"recomendation",
+										"updateRecomendation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteRecomendation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteRecomendation",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5FlsGbnHXLkygySj\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/recomendation/deleteRecomendation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"recomendation",
+										"deleteRecomendation"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "suggestion",
+					"item": [
+						{
+							"name": "readSuggestions",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidReadSuggestions",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/suggestion/readSuggestions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"suggestion",
+										"readSuggestions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createSuggestion",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateSuggestion",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"phone\": \"09918779852\",\n  \"mail\": \"johnD@gmail.com\",\n  \"subject\": \"Recolección de basura\",\n  \"comment\": \"Basura en toda la calle\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/suggestion/createSuggestion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"suggestion",
+										"createSuggestion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateSuggestion",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateSuggestion",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5_ZFUJbgrmp69YU3\",\n  \"name\": \"John Doe\",\n  \"phone\": \"09918779852\",\n  \"mail\": \"johnD@gmail.com\",\n  \"subject\": \"Recolección de basura\",\n  \"comment\": \"Basura en toda la calle\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/suggestion/updateSuggestion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"suggestion",
+										"updateSuggestion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteSuggestion",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteSuggestion",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-Mj_UT1btkvEQ8Bw1U1K\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/suggestion/deleteSuggestion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"suggestion",
+										"deleteSuggestion"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "loginUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidLoginUser",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mail\": \"gabriel.valdivieso.005@gmail.com\",\n    \"password\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user/loginUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user",
+										"loginUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "readUsers",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidReadUsers",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user/readUsers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user",
+										"readUsers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateUser",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Gabriel\",\n    \"lastname\": \"Valdivieso\",\n    \"user\": \"GvN\",\n    \"mail\": \"gabriel.valdivieso.005@gmail.com\",\n    \"phone\": \"0998725873\",\n    \"password\": \"123abc\",\n    \"address\": \"Miraflores\",\n    \"profile\": \"C\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user/createUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user",
+										"createUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateUser",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"123abc\",\n    \"name\": \"Gabriel\",\n    \"lastname\": \"Valdivieso\",\n    \"user\": \"GvN\",\n    \"mail\": \"gabriel.valdivieso.005@gmail.com\",\n    \"phone\": \"0998725873\",\n    \"password\": \"123abc\",\n    \"address\": \"Miraflores\",\n    \"profile\": \"C\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user/updateUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user",
+										"updateUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteUser",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"-MjT5FlsGbnHXLkygySj\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user/deleteUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user",
+										"deleteUser"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "video",
+					"item": [
+						{
+							"name": "readVideos",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidReadVideos",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/video/readVideos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"video",
+										"readVideos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createVideo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateVideo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Botellas de plástico\",\n  \"credites\": \"Reciclables\",\n  \"videoUrl\": \"https://www.youtube.com/watch?v=xCaI-5WVRlY\",\n  \"videoLocal\": \"https://www.youtube.com/watch?v=C1M8WdkqXMA\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/video/createVideo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"video",
+										"createVideo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateVideo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateVideo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT8atYRpAX96lqrauw\",\n  \"title\": \"Botellas de plástico 22222\",\n  \"credites\": \"Reciclables\",\n  \"videoUrl\": \"https://www.youtube.com/watch?v=xCaI-5WVRlY\",\n  \"videoLocal\": \"https://www.youtube.com/watch?v=C1M8WdkqXMA\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/video/updateVideo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"video",
+										"updateVideo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteVideo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteVideo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5FlsGbnHXLkygySj\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/video/deleteVideo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"video",
+										"deleteVideo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "modulos",
+			"item": [
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "createContact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateContact",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"service\": \"Carpintero\",\n      \"name\": \"Guillermo\",\n      \"lastname\": \"Gutiérrez\",\n      \"address\": \"San José\",\n      \"phone\": \"0987099923\",\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5011/contact/createContact",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5011",
+									"path": [
+										"contact",
+										"createContact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateContact",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateContact",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"-MjT4f4Eir06vSyaqFCR\",\n    \"service\": \"Albañil 3\",\n    \"name\": \"Juan 3\",\n    \"lastname\": \"Perez 3\",\n    \"address\": \"Miraflores 3\",\n    \"phone\": \"0998725873\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5011/contact/updateContact",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5011",
+									"path": [
+										"contact",
+										"updateContact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteContact",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteContact",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"-MjT4f4Eir06vSyaqFCR\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5011/contact/deleteContact",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5011",
+									"path": [
+										"contact",
+										"deleteContact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllContacts",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindAllContacts",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5011/contact/findAllContacts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5011",
+									"path": [
+										"contact",
+										"findAllContacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findContactsByUserId",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindContactsByUserId",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5011/contact/findContactsByUserId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5011",
+									"path": [
+										"contact",
+										"findContactsByUserId"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "new",
+					"item": [
+						{
+							"name": "createNew",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateNew",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Diez países pesqueros se comprometen a reciclar 1.500 toneladas de redes en desuso\",\n    \"smallDescription\": \"Se busca apoyar economía circular para elaborar nuevos productos.\",\n    \"category\": \"ambiente\",\n    \"imageUrl\": \"https://www.eluniverso.com/resizer/ECr6MYK72dvmLRbLNpTidKMarro=/834x644/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/BNJPCN75JNEMTKZQLTUFKKSKYE.jpg\",\n    \"content\": \"Gremios de pesca industrial de diez países de América Latina se comprometieron a recuperar 1.500 toneladas de redes y aparejos en desuso para su reciclaje y posterior elaboración de nuevos productos. La iniciativa, que busca apoyar la economía circular, involucra a Ecuador, Argentina, Uruguay, Brasil, México, Costa Rica, El Salvador, Colombia, Perú y Chile. El compromiso de reciclar las redes se fijó en la sexta reunión de la Alianza Latinoamericana para la Pesca Sustentable y la Seguridad Alimentaria (Alpescas), de la cual es parte la Cámara Nacional de Pesquería de Ecuador. Este acuerdo se firmó con Bureo Inc., una empresa que elabora gorras a partir de reciclaje de redes. Con este acuerdo se pretende proteger los océanos de redes fantasmas, reducir la huella de carbono asociado al uso de esta materia prima, generar nuevos productos con valor agregado y aportar a los cumplimientos de los Objetivos de Desarrollo Sostenible de Naciones Unidas. Osciel Velásquez, presidente de Alpescas, dijo que no existe un precedente a nivel mundial de una iniciativa similar, que agrupe a la industria de todo un continente. “Hoy la economía circular permite un aprovechamiento integral de los recursos pesqueros, reciclando y reutilizando diversos desechos del proceso para generar nuevos productos, contribuyendo a más negocios y a la utilización de residuos biológicos y técnicos”, agregó Velásquez. Humberto Becerra, presidente de la Cámara Nacional de las Industrias Pesquera y Acuícola (Canainpesca), expresó la importancia de fortalecer la coordinación de las empresas para seguir impulsando la sostenibilidad de las pesquerías y adecuarse al mercado para fomentar el consumo. Durante la cita de los gremios de pesca industrial también se abordaron otros temas, como el impacto del COVID-19 y la pesca ilegal. Ray Hilborn, biólogo marino y profesor de Ciencias Acuáticas y Pesqueras en la Universidad de Washington, subrayó que la pesca no es la principal amenaza para los océanos, pues produce alimentos a un costo ambiental mucho menor que la agricultura. Pero enfatizó que es necesario gestionarla de manera sustentable. “La pesca no modifica los océanos, y en comparación con otras amenazas, es de relativamente bajo impacto y manejable”, dijo. Julio Berdegué, representante regional para América Latina y el Caribe de la FAO, expuso que el 40 % de la población en América Latina y el Caribe vive en inseguridad alimentaria, y reconoció que sin la pesca no podrá alcanzarse el objetivo de hambre cero. “Productividad, con sostenibilidad e inclusión social, es la ecuación para la pesca en este siglo; si no se resuelve, el futuro será muy incierto”, dijo al recordar que el año pasado, en un solo año, 44 millones de personas adicionales se unieron al grupo de quienes viven en inseguridad alimentaria. “Ese es el impacto de la pandemia. Ninguna otra región del mundo tuvo un incremento tan grande”, refirió. (I)\",\n    \"font\": \"https://www.eluniverso.com/noticias/economia/diez-paises-pesqueros-se-compromoten-a-reciclar-1500-toneladas-de-redes-en-desuso-nota/\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5012/new/createNew",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5012",
+									"path": [
+										"new",
+										"createNew"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateNew",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateNew",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5FlsGbnHXLkygySj\",\n  \"title\": \"En Guayarte artistas ecuatorianas exhiben sus productos elaborados con llantas recicladas 2222\",\n  \"smallDescription\": \"Las manos de las artesanas ecuatorianas hacen de una llanta inservible un objeto útil y decorativo.\",\n  \"category\": \"reciclaje\",\n  \"imageUrl\": \"https://www.eluniverso.com/resizer/6eIfOUDeAINlwjBU07BklAfDAqs=/1005x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/K3ZHMB7UVNGZVIQYPJHEIYLYQE.jpg\",\n  \"content\": \"Gremios de pesca industrial de diez países de América Latina se comprometieron a recuperar 1.500 toneladas de redes y aparejos en desuso para su reciclaje y posterior elaboración de nuevos productos. La iniciativa, que busca apoyar la economía circular, involucra a Ecuador, Argentina, Uruguay, Brasil, México, Costa Rica, El Salvador, Colombia, Perú y Chile. El compromiso de reciclar las redes se fijó en la sexta reunión de la Alianza Latinoamericana para la Pesca Sustentable y la Seguridad Alimentaria (Alpescas), de la cual es parte la Cámara Nacional de Pesquería de Ecuador. Este acuerdo se firmó con Bureo Inc., una empresa que elabora gorras a partir de reciclaje de redes. Con este acuerdo se pretende proteger los océanos de redes fantasmas, reducir la huella de carbono asociado al uso de esta materia prima, generar nuevos productos con valor agregado y aportar a los cumplimientos de los Objetivos de Desarrollo Sostenible de Naciones Unidas. Osciel Velásquez, presidente de Alpescas, dijo que no existe un precedente a nivel mundial de una iniciativa similar, que agrupe a la industria de todo un continente. “Hoy la economía circular permite un aprovechamiento integral de los recursos pesqueros, reciclando y reutilizando diversos desechos del proceso para generar nuevos productos, contribuyendo a más negocios y a la utilización de residuos biológicos y técnicos”, agregó Velásquez. Humberto Becerra, presidente de la Cámara Nacional de las Industrias Pesquera y Acuícola (Canainpesca), expresó la importancia de fortalecer la coordinación de las empresas para seguir impulsando la sostenibilidad de las pesquerías y adecuarse al mercado para fomentar el consumo. Durante la cita de los gremios de pesca industrial también se abordaron otros temas, como el impacto del COVID-19 y la pesca ilegal. Ray Hilborn, biólogo marino y profesor de Ciencias Acuáticas y Pesqueras en la Universidad de Washington, subrayó que la pesca no es la principal amenaza para los océanos, pues produce alimentos a un costo ambiental mucho menor que la agricultura. Pero enfatizó que es necesario gestionarla de manera sustentable. “La pesca no modifica los océanos, y en comparación con otras amenazas, es de relativamente bajo impacto y manejable”, dijo. Julio Berdegué, representante regional para América Latina y el Caribe de la FAO, expuso que el 40 % de la población en América Latina y el Caribe vive en inseguridad alimentaria, y reconoció que sin la pesca no podrá alcanzarse el objetivo de hambre cero. “Productividad, con sostenibilidad e inclusión social, es la ecuación para la pesca en este siglo; si no se resuelve, el futuro será muy incierto”, dijo al recordar que el año pasado, en un solo año, 44 millones de personas adicionales se unieron al grupo de quienes viven en inseguridad alimentaria. “Ese es el impacto de la pandemia. Ninguna otra región del mundo tuvo un incremento tan grande”, refirió. (I)\",\n  \"font\": \"https://www.eluniverso.com/guayaquil/comunidad/en-guayarte-artistas-ecuatorianas-exhiben-sus-productos-elaborados-con-llantas-recicladas-nota/\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5012/new/updateNew",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5012",
+									"path": [
+										"new",
+										"updateNew"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteNew",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteNew",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"-MjT5FlsGbnHXLkygySj\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5012/new/deleteNew",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5012",
+									"path": [
+										"new",
+										"deleteNew"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllNews",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindAllNews",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5012/new/findAllNews",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5012",
+									"path": [
+										"new",
+										"findAllNews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findNewsByUserId",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindNewsByUserId",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5012/new/findNewsByUserId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5012",
+									"path": [
+										"new",
+										"findNewsByUserId"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "recomendation",
+					"item": [
+						{
+							"name": "createRecomendation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateRecomendation",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Mascarillas, seguro de vida\",\n  \"category\": \"Coronavirus\",\n  \"description\": \"A menudo las mascarillas no son tratadas como se debería\",\n  \"portalImage\": \"https://images.unsplash.com/photo-1591870036007-2d195e054914?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80\",\n  \"profileImage\": \"https://images.unsplash.com/photo-1584634428004-1180accbcc9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5013/recomendation/createRecomendation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5013",
+									"path": [
+										"recomendation",
+										"createRecomendation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateRecomendation",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateRecomendation",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5_ZFUJbgrmp69YU3\",\n  \"title\": \"Botellas de plástico 22222\",\n  \"category\": \"Reciclables\",\n  \"description\": \"Las botellas y su descripción\",\n  \"portalImage\": \"https://images.unsplash.com/photo-1571727153934-b9e0059b7ab2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80\",\n  \"profileImage\": \"https://images.unsplash.com/photo-1616118134296-63970235de49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5013/recomendation/updateRecomendation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5013",
+									"path": [
+										"recomendation",
+										"updateRecomendation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteRecomendation",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteRecomendation",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"-MjT5_ZFUJbgrmp69YU3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5013/recomendation/deleteRecomendation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5013",
+									"path": [
+										"recomendation",
+										"deleteRecomendation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllRecomendations",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindAllRecomendations",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5013/recomendation/findAllRecomendations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5013",
+									"path": [
+										"recomendation",
+										"findAllRecomendations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findRecomendationsByUserId",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindRecomendationsByUserId",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5013/recomendation/findRecomendationsByUserId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5013",
+									"path": [
+										"recomendation",
+										"findRecomendationsByUserId"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "suggestion",
+					"item": [
+						{
+							"name": "createSuggestion",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateSuggestion",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"phone\": \"09918779852\",\n  \"mail\": \"johnD@gmail.com\",\n  \"subject\": \"Recolección de basura\",\n  \"comment\": \"Basura en toda la calle\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/suggestion/createSuggestion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"suggestion",
+										"createSuggestion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateSuggestion",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateSuggestion",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT5_ZFUJbgrmp69YU3\",\n  \"name\": \"John Doe\",\n  \"phone\": \"09918779852\",\n  \"mail\": \"johnD@gmail.com\",\n  \"subject\": \"Recolección de basura\",\n  \"comment\": \"Basura en toda la calle\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/suggestion/updateSuggestion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"suggestion",
+										"updateSuggestion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteSuggestion",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteSuggestion",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"-MjT5_ZFUJbgrmp69YU3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/suggestion/deleteSuggestion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"suggestion",
+										"deleteSuggestion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllSuggestions",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindAllSuggestions",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/suggestion/findAllSuggestions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"suggestion",
+										"findAllSuggestions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findSuggestionsByUserId",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindSuggestionsByUserId",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/suggestion/findSuggestionsByUserId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"suggestion",
+										"findSuggestionsByUserId"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "createUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateUser",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Gabriel\",\n  \"lastname\": \"Valdivieso\",\n  \"user\": \"GvN\",\n  \"mail\": \"gabriel.valdivieso.005@gmail.com\",\n  \"phone\": \"0998725873\",\n  \"password\": \"123abc\",\n  \"address\": \"Miraflores\",\n  \"profile\": \"C\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/user/createUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"user",
+										"createUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateUser",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateUser",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT6cY4VbTrZPoV9h-2\",\n  \"name\": \"Gabriel 222222\",\n  \"lastname\": \"Valdivieso\",\n  \"user\": \"GvN\",\n  \"mail\": \"gabriel.valdivieso.005@gmail.com\",\n  \"phone\": \"0998725873\",\n  \"password\": \"123abc\",\n  \"address\": \"Miraflores\",\n  \"profile\": \"C\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/user/updateUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"user",
+										"updateUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteUser",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"-MjT6cY4VbTrZPoV9h-2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/user/deleteUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"user",
+										"deleteUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllUsers",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindAllUsers",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/user/findAllUsers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"user",
+										"findAllUsers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findUserByLogin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindUserByLogin",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mail\": \"gabriel.valdivieso.005@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5014/user/findUserByLogin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5014",
+									"path": [
+										"user",
+										"findUserByLogin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "video",
+					"item": [
+						{
+							"name": "createVideo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidCreateVideo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Botellas de plástico\",\n  \"credites\": \"Reciclables\",\n  \"videoUrl\": \"https://www.youtube.com/watch?v=xCaI-5WVRlY\",\n  \"videoLocal\": \"https://www.youtube.com/watch?v=C1M8WdkqXMA\",\n  \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5015/video/createVideo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5015",
+									"path": [
+										"video",
+										"createVideo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateVideo",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidUpdateVideo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"-MjT8atYRpAX96lqrauw\",\n  \"title\": \"Botellas de plástico 22222\",\n  \"credites\": \"Reciclables\",\n  \"videoUrl\": \"https://www.youtube.com/watch?v=xCaI-5WVRlY\",\n  \"videoLocal\": \"https://www.youtube.com/watch?v=C1M8WdkqXMA\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5015/video/updateVideo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5015",
+									"path": [
+										"video",
+										"updateVideo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteVideo",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidDeleteVideo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"-MjT8atYRpAX96lqrauw\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5015/video/deleteVideo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5015",
+									"path": [
+										"video",
+										"deleteVideo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAllVideos",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindAllVideos",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5015/video/findAllVideos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5015",
+									"path": [
+										"video",
+										"findAllVideos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findVideosByUserId",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "uuid",
+										"value": "uuidFindVideosByUserId",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5015/video/findVideosByUserId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5015",
+									"path": [
+										"video",
+										"findVideosByUserId"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,69 @@
+const configuracion = require('./environment/environment')
+
+const PATH_CONTACT = '/contact'
+const PATH_NEW = '/new'
+const PATH_RECOMENDATION = '/recomendation'
+const PATH_SUGGESTION = '/suggestion'
+const PATH_USER = '/user'
+const PATH_VIDEO = '/video'
+
+module.exports = {
+    COMPONENT: 'gateway',
+    PORT: configuracion.PORT_CONFIG,
+
+    PATH_CONTACT: PATH_CONTACT,
+    PATH_READ_CONTACTS_BY_USER: PATH_CONTACT + '/readContacts',
+    PATH_CREATE_CONTACT: PATH_CONTACT + '/createContact',
+    PATH_UPDATE_CONTACT: PATH_CONTACT + '/updateContact',
+    PATH_DELETE_CONTACT: PATH_CONTACT + '/deleteContact',
+
+    PATH_NEW: PATH_NEW,
+    PATH_READ_NEWS_BY_USER: PATH_NEW + '/readNews',
+    PATH_CREATE_NEW: PATH_NEW + '/createNew',
+    PATH_UPDATE_NEW: PATH_NEW + '/updateNew',
+    PATH_DELETE_NEW: PATH_NEW + '/deleteNew',
+
+    PATH_RECOMENDATION: PATH_RECOMENDATION,
+    PATH_READ_RECOMENDATIONS_BY_USER: PATH_RECOMENDATION + '/readRecomendations',
+    PATH_CREATE_RECOMENDATION: PATH_RECOMENDATION + '/createRecomendation',
+    PATH_UPDATE_RECOMENDATION: PATH_RECOMENDATION + '/updateRecomendation',
+    PATH_DELETE_RECOMENDATION: PATH_RECOMENDATION + '/deleteRecomendation',
+
+    PATH_SUGGESTION: PATH_SUGGESTION,
+    PATH_READ_SUGGESTIONS_BY_USER: PATH_SUGGESTION + '/readSuggestions',
+    PATH_CREATE_SUGGESTION: PATH_SUGGESTION + '/createSuggestion',
+    PATH_UPDATE_SUGGESTION: PATH_SUGGESTION + '/updateSuggestion',
+    PATH_DELETE_SUGGESTION: PATH_SUGGESTION + '/deleteSuggestion',
+
+    PATH_USER: PATH_USER,
+    PATH_LOGIN_USER: PATH_USER + '/loginUser',
+    PATH_READ_USERS: PATH_USER + '/readUsers',
+    PATH_CREATE_USER: PATH_USER + '/createUser',
+    PATH_UPDATE_USER: PATH_USER + '/updateUser',
+    PATH_DELETE_USER: PATH_USER + '/deleteUser',
+
+    PATH_VIDEO: PATH_VIDEO,
+    PATH_READ_VIDEOS_BY_USER: PATH_VIDEO + '/readVideos',
+    PATH_CREATE_VIDEO: PATH_VIDEO + '/createVideo',
+    PATH_UPDATE_VIDEO: PATH_VIDEO + '/updateVideo',
+    PATH_DELETE_VIDEO: PATH_VIDEO + '/deleteVideo',
+
+    SUCCESS_CODE: '0000',
+    NOT_PARAMETERS_CODE: '0001',
+    NOT_FOUND_CODE: '0002',
+    ERROR_CODE: '0003',
+
+    CONTACT_NOT_FOUND_CODE: '0010',
+
+    NEW_NOT_FOUND_CODE: '0020',
+
+    RECOMENDATION_NOT_FOUND_CODE: '0030',
+
+    SUGGESTION_NOT_FOUND_CODE: '0040',
+    
+    USER_INCORRECT_PASSWORD_CODE: '0050',
+    USER_NOT_FOUND_CODE: '0051',
+
+    VIDEO_NOT_FOUND_CODE: '0060'
+    
+}
